@@ -3,7 +3,7 @@ import telebot
 import json
 
 
-token = <your telegram bot token>
+token = 1292013801:AAF9wIEBAjVVedaBRXp-SX8zrQ1E96tF2bM
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
@@ -17,7 +17,7 @@ def start(message):
 def weather(message):
     api_url = 'https://api.openweathermap.org/data/2.5/weather'
     city = message.text
-    r = requests.post(url = api_url, params = {'q' : city, 'APPID' : '<your API>', 'units' : 'metric'})
+    r = requests.post(url = api_url, params = {'q' : city, 'APPID' : '7dcdaee53699b80f434071b42c259178', 'units' : 'metric'})
     if r.status_code == 200:
         
         response = json.loads(r.content)
