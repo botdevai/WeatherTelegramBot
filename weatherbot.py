@@ -10,7 +10,7 @@ bot = telebot.TeleBot(token)
 def start(message):
     sticker = open('static/sticker.webp', 'rb')
     bot.send_sticker(message.chat.id, sticker)
-    bot.send_message(message.chat.id, 'Welcome to our weather bot. Enter your city\n\n<b>Join my channel for getting news about me 👉 @AI_bot_projects<\b>')
+    bot.send_message(message.chat.id, 'Welcome to our weather bot. Enter your city\n\nJoin my channel for getting news about me 👉 @AI_bot_projects')
 
 
 @bot.message_handler(content_types=['text'])
