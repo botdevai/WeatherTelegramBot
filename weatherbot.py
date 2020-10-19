@@ -10,7 +10,7 @@ bot = telebot.TeleBot(token)
 def start(message):
     sticker = open('static/sticker.webp', 'rb')
     bot.send_sticker(message.chat.id, sticker)
-    bot.send_message(message.chat.id, 'Welcome to our weather bot. Enter your city')
+    bot.send_message(message.chat.id, 'Welcome to our weather bot. Enter your city/n/nJoin my channel for getting news about me')
 
 
 @bot.message_handler(content_types=['text'])
@@ -28,7 +28,7 @@ def weather(message):
         pressure = str(response['main']['pressure'])
         humidity = str(response['main']['humidity'])
 
-        msg = 'The current weather in ' + city + ' ' + temp + '°C' + '\n' + 'Maximum temperature: ' + max_temp + '°C' + '\n' + 'Minimum temperature: ' + min_temp + '°C' + '\n' + 'Wind speed: ' + wind_speed + '\n' + 'Pressure: ' + pressure + '\n' + 'Humidity: ' + humidity
+        msg = 'The current weather in ' + city + ' ' + temp + '°C' + '\n' + 'Maximum temperature: ' + max_temp + '°C' + '\n' + 'Minimum temperature: ' + min_temp + '°C' + '\n' + 'Wind speed: ' + wind_speed + '\n' + 'Pressure: ' + pressure + '\n' + 'Humidity: ' + humidity +  '/n'
 
         bot.send_message(message.chat.id, msg)
     else:
