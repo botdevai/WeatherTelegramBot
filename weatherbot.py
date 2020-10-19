@@ -3,7 +3,7 @@ import telebot
 import json
 
 
-token = 1292013801:AAF9wIEBAjVVedaBRXp-SX8zrQ1E96tF2bM
+token = '1292013801:AAF9wIEBAjVVedaBRXp-SX8zrQ1E96tF2bM'
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
